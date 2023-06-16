@@ -48,7 +48,7 @@ class NoteInputForm extends React.Component {
   render() {
     return (
       <form
-        className="form-add-note"
+        className="add-new-page__input"
         onSubmit={(e) => this.props.onSubmitHandler(e, this.state)}
       >
         <input

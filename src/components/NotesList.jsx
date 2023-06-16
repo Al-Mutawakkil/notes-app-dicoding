@@ -2,13 +2,15 @@ import CardNote from './CardNote';
 import PropTypes from 'prop-types';
 
 const NotesList = ({ notes }) => {
-  return (
+  return notes.length > 0 ? (
     <div className="notes-list">
-      {notes.length > 0 ? (
-        notes.map((note) => <CardNote note={note} />)
-      ) : (
-        <p className="not-found-message">Tidak Ada Catatan</p>
-      )}
+      {notes.map((note) => (
+        <CardNote note={note} key={note.id} />
+      ))}
+    </div>
+  ) : (
+    <div className="notes-list-empty">
+      <p>Tidak Ada Catatan</p>
     </div>
   );
 };

@@ -1,13 +1,13 @@
 import React from 'react';
-import { getActiveNotes } from '../utils/local-data';
+import { getArchivedNotes } from '../utils/local-data';
 import NotesList from '../components/NotesList';
 
-class HomeView extends React.Component {
+class ArchiveView extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      notes: getActiveNotes() || [],
+      notes: getArchivedNotes() || [],
       keyword: props.defaultKeyword || '',
     };
   }
@@ -27,4 +27,4 @@ class HomeView extends React.Component {
   }
 }
 
-export default HomeView;
+export default ArchiveView;

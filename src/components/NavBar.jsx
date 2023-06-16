@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { FiMoreVertical } from 'react-icons/fi';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -21,9 +20,9 @@ class NavBar extends React.Component {
             <li>
               <Link to="/">Home</Link>
             </li>
-            {/* <li>
+            <li>
               <Link to="/archivednotes">Archived Notes</Link>
-            </li> */}
+            </li>
             <li>
               <Link to="/addnote">Add Note</Link>
             </li>
