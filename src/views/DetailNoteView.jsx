@@ -9,6 +9,7 @@ import React from 'react';
 import { showFormattedDate } from '../utils';
 import DeleteButton from '../components/DeleteButton';
 import ArchiveButton from '../components/ArchiveButton';
+import PropTypes from 'prop-types';
 
 const DetailNoteViewWrapper = () => {
   const navigate = useNavigate();
@@ -22,10 +23,8 @@ const DetailNoteViewWrapper = () => {
   const onArchiveHandler = (id, archived) => {
     if (archived) {
       unarchiveNote(id);
-      console.log('UNARCHIVED');
     } else {
       archiveNote(id);
-      console.log('ARCHIVED');
     }
 
     navigate('/');
@@ -72,4 +71,8 @@ class DetailNoteView extends React.Component {
     );
   }
 }
+
+DetailNoteView.propTypes = {
+  note: PropTypes.object.isRequired,
+};
 export default DetailNoteViewWrapper;
