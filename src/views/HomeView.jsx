@@ -21,8 +21,4 @@ class HomeView extends React.Component {
   }
 }
 
-HomeView.propTypes = {
-  notes: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
-
 export default HomeView;

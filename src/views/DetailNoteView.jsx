@@ -73,6 +73,8 @@ class DetailNoteView extends React.Component {
 }
 
 DetailNoteView.propTypes = {
-  note: PropTypes.object.isRequired,
+  id: PropTypes.string.isRequired,
+  onDeleteHandler: PropTypes.func.isRequired,
+  onArchiveHandler: PropTypes.func.isRequired,
 };
 export default DetailNoteViewWrapper;

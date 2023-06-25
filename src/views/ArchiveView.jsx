@@ -21,8 +21,4 @@ class ArchiveView extends React.Component {
   }
 }
 
-HomeView.propTypes = {
-  notes: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
-
 export default ArchiveView;
